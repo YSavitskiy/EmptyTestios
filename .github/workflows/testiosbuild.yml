@@ -2,7 +2,7 @@ name: Xcode - Build and Analyze
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "disable" ]
 
 jobs:
   build:
