@@ -8,14 +8,20 @@ struct ContentView: View {
     private let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? ""
 
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text(timeString ?? time())
-            Text("\(version) b\(build)")
-        }.onReceive(timer) { _ in
-            self.timeString = time()
+        ZStack {
+            RadialGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)),Color(#colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1))]),
+                           center: .center,
+                           startRadius: 5,
+                           endRadius: 500).ignoresSafeArea()
+            VStack {
+                Image(systemName: "globe")
+                    .imageScale(.large)
+                    .foregroundColor(.accentColor)
+                Text(timeString ?? time())
+                Text("\(version) b\(build)")
+            }.onReceive(timer) { _ in
+                self.timeString = time()
+            }
         }
     }
 
