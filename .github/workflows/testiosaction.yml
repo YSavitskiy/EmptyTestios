@@ -23,7 +23,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: builds
-      - shell: bash
         run: | 
             ls -la
 
