@@ -1,8 +1,8 @@
 name: iOS test
 env:
       ENVTEMP: ${{ secrets.TESTOTESTO }}
-      ENVTEMP2: ${{ secrets.TEST2 }}
-      ENVTEMP3: ${{ secrets.TEST3 }}
+      ENVTEMP2: ${{ vars.TEST }}
+      ENVTEMP3: ${{ vars.TEST2 }}
 on:
   push:
     branches: [ "main" ]  
@@ -15,9 +15,9 @@ jobs:
       run: | 
             echo "$ENVTEMP"
             echo "---"
-            echo "$TEST2"
+            echo "$ENVTEMP2"
             echo "---"
-            echo "$TEST3"
+            echo "$ENVTEMP3"
 
 #  build:
  #   name: Build and Test default scheme using any available iPhone simulator
