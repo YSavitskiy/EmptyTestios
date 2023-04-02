@@ -10,14 +10,15 @@ jobs:
   check: 
     name: Just check
     runs-on: ubuntu-latest
+    environment: testEnv
     steps: 
     - shell: bash
       run: | 
             echo "$ENVTEMP"
             echo "---"
-            echo "$ENVTEMP2"
+            echo "$TEST"
             echo "---"
-            echo "$ENVTEMP3"
+            echo "$TEST2"
 
 #  build:
  #   name: Build and Test default scheme using any available iPhone simulator
