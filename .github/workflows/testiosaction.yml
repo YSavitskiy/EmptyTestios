@@ -1,7 +1,6 @@
 name: iOS test
 env:
       ENVTEMP: ${{ secrets.TESTOTESTO }}
-      TEMPO: ${{ TEST }}
       TEMPO2: ${{ testEnv.TEST }}
 on:
   push:
