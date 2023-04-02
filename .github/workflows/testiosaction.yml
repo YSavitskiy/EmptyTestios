@@ -5,10 +5,9 @@ on:
     branches: [ "main" ]  
 jobs:
   check: 
-    name: just check
+    name: Just check
     runs-on: ubuntu-latest
     steps: 
-    - name: Printer
     - shell: bash
     env:
       ENVTEMP: ${{ secrets.TEST }}
