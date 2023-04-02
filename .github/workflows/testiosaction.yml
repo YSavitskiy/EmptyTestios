@@ -1,6 +1,6 @@
 name: iOS test
 env:
-      ENVTEMP: ${{ secrets.TEST }}
+      ENVTEMP: ${{ secrets.TESTOTESTO }}
       
 on:
   push:
@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
     - shell: bash
-      run: echo "$ENVTEMP"
+      run: echo "$ENVTEMP" && echo "$TEST"
 
 #  build:
  #   name: Build and Test default scheme using any available iPhone simulator
