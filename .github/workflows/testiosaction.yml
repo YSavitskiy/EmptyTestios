@@ -8,8 +8,11 @@ jobs:
     name: just check
     runs-on: ubuntu-latest
     steps: 
-      - name: Printer
-        run: echo "TESTO"
+    - name: Printer
+    - shell: bash
+    env:
+      ENVTEMP: ${{ secrets.TEST }}
+      run: echo "$ENVTEMP"
 
 #  build:
  #   name: Build and Test default scheme using any available iPhone simulator
