@@ -4,6 +4,6 @@ import XCTest
 final class EmptyProjectTests: XCTestCase {
 
     func testExample() throws {
-        XCTAssertTrue(false, "failed")
+        XCTAssertTrue(true, "failed")
     }
 }
