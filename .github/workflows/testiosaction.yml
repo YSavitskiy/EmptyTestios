@@ -1,8 +1,6 @@
 name: iOS test
 env:
       ENVTEMP: ${{ secrets.TESTOTESTO }}
-      ENVTEMP2: ${{ vars.TEST }}
-      ENVTEMP3: ${{ vars.TEST2 }}
 on:
   push:
     branches: [ "main" ]  
@@ -17,8 +15,17 @@ jobs:
             echo "$ENVTEMP"
             echo "---"
             echo "$TEST"
-            echo "---"
-            echo "$secrets.TEST2"
+            
+  tests: 
+    name: iOS test
+    runs-on: macos-latest    
+    steps: 
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: builds
+      - shell: bash
+        run: | 
+            ls -la
 
 #  build:
  #   name: Build and Test default scheme using any available iPhone simulator
