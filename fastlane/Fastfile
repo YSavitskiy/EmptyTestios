@@ -1,8 +1,6 @@
 fastlane_version "2.205.0"
 default_platform :ios
 
-import "FastRoutine.rb"
-
 platform :ios do
 
 lane :tests do |options|
