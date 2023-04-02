@@ -1,7 +1,6 @@
 name: iOS test
 env:
       ENVTEMP: ${{ secrets.TESTOTESTO }}
-      TEMPO2: ${{ testEnv.TEST }}
 on:
   push:
     branches: [ "main" ]  
@@ -14,9 +13,7 @@ jobs:
       run: | 
             echo "$ENVTEMP"
             echo "---"
-            echo "$TEMPO"
-            echo "---"
-            echo "$TEMPO2"
+            echo "$TEST"
 
 #  build:
  #   name: Build and Test default scheme using any available iPhone simulator
