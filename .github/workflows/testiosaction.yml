@@ -18,7 +18,7 @@ jobs:
             echo "---"
             echo "$TEST"
             echo "---"
-            echo "$TEST2"
+            echo "$secrets.TEST2"
 
 #  build:
  #   name: Build and Test default scheme using any available iPhone simulator
