@@ -1,0 +1,30 @@
+{
+  "configurations" : [
+    {
+      "id" : "B2B9E430-3318-41D7-B660-3DF39DE15A94",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:EmptyProject.xcodeproj",
+      "identifier" : "D20CBF3229D9E91F00A0DDF7",
+      "name" : "EmptyProject"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:EmptyProject.xcodeproj",
+        "identifier" : "D20CBF4229D9E92000A0DDF7",
+        "name" : "EmptyProjectTests"
+      }
+    }
+  ],
+  "version" : 1
+}
