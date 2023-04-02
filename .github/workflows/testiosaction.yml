@@ -1,5 +1,7 @@
 name: iOS test
-
+env:
+      ENVTEMP: ${{ secrets.TEST }}
+      
 on:
   push:
     branches: [ "main" ]  
@@ -9,8 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
     - shell: bash
-    env:
-      ENVTEMP: ${{ secrets.TEST }}
       run: echo "$ENVTEMP"
 
 #  build:
